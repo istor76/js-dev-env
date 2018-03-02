@@ -1,5 +1,4 @@
 import path from 'path';
-import htmlWebpackPlugin from 'html-webpack-plugin';
 
 export default {
   debug: true,
@@ -14,13 +13,7 @@ export default {
     publicPath: '/',
     filename: 'bundle.js'
   },
-  plugins: [
-    // Create HTML file that include reference to bondled JS
-    new htmlWebpackPlugin({
-      template: 'src/index.html',
-      inject: true
-    })
-  ],
+  plugins: [],
   module: {
     loaders: [
       {test: /\.js$/, exclude: /node_modules/, loaders: ['babel']},
